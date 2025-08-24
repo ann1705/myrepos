@@ -28,19 +28,21 @@ public class bankapp {
                   banking.bankingClass bApp[] = new bankingClass[10];
                   bApp[0] = new bankingClass();
                   do{
-                    System.out.print("1.Register Account");
-                    System.out.print("2. Login Account");
-                    System.out.print("3. View All Accounts");
+                    System.out.println("1.Register Account");
+                    System.out.println("2. Login Account");
+                    System.out.println("3. View All Accounts");
+                    
                     System.out.print("4. Enter Selection: ");
                     int action = sc.nextInt();
                     
                     
                     switch(action){
                         case 1: 
-                            System.out.println("Enter Account No.: ");
+                            System.out.print("Enter Account No.: ");
                             bApp[0].setAccount(sc.nextInt());
-                            System.out.println("Enter Account PIN: ");
+                            System.out.print("Enter Account PIN: ");
                             bApp[0].setPin(sc.nextInt());
+                            
                             System.out.println("Account registered successfully!");
                             break;
                             
@@ -55,7 +57,7 @@ public class bankapp {
                             System.out.print("Enter Account No.: ");
                             int accNo = sc.nextInt();
                             
-                            System.out.println("Enter Your PIN: ");
+                            System.out.print("Enter Your PIN: ");
                             int pin = sc.nextInt();
                             
                             while(!(bApp[0].verifyAccount(accNo, pin))){
@@ -86,24 +88,19 @@ public class bankapp {
                                 
                                 switch(bankChoice){
                                     case 1:
-                                        System.out.print("Enter amount to deposit: ");
-                                        double depositAmount = sc.nextDouble();
-                                        bApp[0].deposit(depositAmount);
-                                        System.out.println("Amount deposited successfully!");
+                                       
                                         break;
                                         
                                     case 2:
-                                        System.out.print("Enter amount to withdraw: ");
-                                        double withdrawAmount = sc.nextDouble();
-                                        bApp[0].withdraw(withdrawAmount);
+                                       
                                         break;
                                         
                                     case 3:
-                                        System.out.println("Current Balance: " + bApp[0].getBalance());
+                                        
                                         break;
                                         
                                     case 4:
-                                        System.out.println("Logging out...");
+                                       
                                         break;
                                         
                                     default:
